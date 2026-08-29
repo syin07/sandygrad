@@ -1,7 +1,5 @@
 # sandygrad
 
----
-
 An automatic differentiation engine for scalars built from scratch for *educational purposes*.
 
 ## What it does
