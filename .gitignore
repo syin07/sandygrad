@@ -1,0 +1,20 @@
+# Written with Claude
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor/OS junk
+.vscode/
+.idea/
+.DS_Store
+
+# Test cache
+.pytest_cache/
