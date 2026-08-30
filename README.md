@@ -19,7 +19,9 @@ An automatic differentiation engine for scalars built from scratch for *educatio
 
 ## Challenges
 
-A bug that took a while to track down was applying ReLU to the last layer output. This bug essentially squashed negative outputs from the last layer to zero, which breaks the loss function that I used, since the output of the network is supposed to be either positive or negative. This bug was fixed after correcting an off by one error when checking for the index of the last layer.
+When training my XOR net, I noticed that `total_loss` would always plateau and get stuck at `4` after a few epochs. Initially, I thought this was caused by too many neurons accumulating negative weights, so I implemented a feature that counted the number of "dead neurons" (neurons with output 0.0), but noticed that the number of dead neurons in my net was not unusual (2-4 in a net with 11 neurons total).
+
+ It turns out that this was caused by a bug that was applying ReLU to the last layer output. This bug essentially squashed negative outputs from the last layer to zero, which breaks the loss function that I used, since the output of the network is supposed to be either positive or negative. This bug was fixed after correcting an off by one error when checking for the index of the last layer.
 
 ---
 Inspired by Andrej Karpathy's micrograd
