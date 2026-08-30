@@ -11,7 +11,7 @@ An automatic differentiation engine for scalars built from scratch for *educatio
 
 - [x] Scalar class with `+`, `-`, `*`, `**`, and `ReLU`
 - [x] Reverse-mode autodiff via `backward()`
-- [ ] Support for `/`, `exp`/`log`
+- [ ] Support for `/` 
 - [ ] Unit tests
 - [ ] Graphviz visualization of the computational graph
 - [ ] A small neural net (MLP) built on top of `Scalar`, trained on a toy dataset
