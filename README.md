@@ -15,7 +15,7 @@ An automatic differentiation engine for scalars built from scratch for *educatio
 - [x] Unit tests
 - [x] A small neural net (MLP) built on top of `Scalar`
 - [x] Demo the neural net on the XOR dataset
-- [ ] Update README with description of challenges faced and how I overcame them
+- [x] Update README with description of challenges faced and how I overcame them
 
 ## Challenges
 
