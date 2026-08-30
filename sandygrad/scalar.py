@@ -7,11 +7,8 @@ class Scalar:
         self._op = _op
         self._backward = lambda: None
 
-    def __str__(self):
-        return f"Scalar({self.data}, {self.grad})"
-
     def __repr__(self):
-        return f"Scalar(data={self.data},\ngrad={self.grad},_op={self._op})"
+        return f"Scalar({self.data})"
 
     def __add__(self, other):
         other = other if isinstance(other, Scalar) else Scalar(float(other))
