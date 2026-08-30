@@ -1,7 +1,7 @@
 class Scalar:
 
     def __init__(self, data: float, _prev=(), _op=''):
-        self.data = data
+        self.data = float(data)
         self.grad = 0.0
         self._prev = set(_prev)
         self._op = _op
