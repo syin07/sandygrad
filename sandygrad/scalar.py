@@ -23,8 +23,8 @@ class Scalar:
         )
 
         def _backward():
-            self.grad += 1
-            other.grad += 1
+            self.grad += 1 * out.grad
+            other.grad += 1 * out.grad
 
         out._backward = _backward
         return out
@@ -46,17 +46,7 @@ class Scalar:
         return out
 
     def __neg__(self):
-        out = Scalar(
-            data= -self.data,
-            _prev=(self,),
-            _op='-',
-        )
-
-        def _backward():
-            self.grad += -out.grad
-
-        out._backward = _backward
-        return out
+        return self * -1
 
     def __sub__(self, other):
         return self + (-other)
